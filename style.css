@@ -1,0 +1,301 @@
+@font-face {
+  font-family: "FeelingPassionate";
+  src: url(/icon/webfonts/FeelingPassionate.otf) format("openType");
+}
+
+@font-face {
+  font-family: "rumble";
+  src: url(/icon/webfonts/Rumble.otf) format("openType");
+}
+
+nav h1 {
+  font-family: "FeelingPassionate";
+  font-size: 2.5rem;
+  width: 100%;
+  height: auto;
+  max-width: 375px;
+  font-weight: bolder;
+}
+
+header {
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 80%;
+  scroll-padding-top: 5.5rem;
+  overflow-x: hidden;
+}
+
+body {
+  align-self: center;
+  width: 100%;
+  background: #000000;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+section {
+  padding: 3rem;
+}
+
+header nav a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+header nav span {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+section h1 {
+  text-shadow: 2px 1px #e6b325;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+ {
+  box-sizing: border-box;
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #fff;
+}
+
+.home .content {
+  z-index: 888;
+  color: #fff;
+  width: 100%;
+  margin-top: 50px;
+  display: none;
+}
+
+.home .content.active {
+  display: block;
+}
+
+.content p {
+  mix-blend-mode: color;
+  width: 70%;
+}
+
+p strong {
+  color: #fff;
+}
+
+.home .content h1 {
+  color: #61481c;
+  font-size: 6em;
+  font-weight: 500;
+  font-family: "rumble";
+  letter-spacing: 5px;
+  line-height: 75px;
+  margin-bottom: 40px;
+}
+
+.home .content p {
+  margin-bottom: 65px;
+  font-size: 18px;
+}
+
+.home .content a {
+  background: #61481c;
+  padding: 8px 25px;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  margin: auto;
+}
+
+.home .content img {
+  width: 100%;
+  height: auto;
+  border: #000;
+  border-radius: 8px;
+  margin: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #4c0404;
+  overflow: hidden;
+  height: 0;
+  transition: 0.5s ease;
+  border-radius: 8px;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+  padding: none;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.home .media-icons {
+  z-index: 888;
+  position: absolute;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s ease;
+}
+
+.home .media-icons a {
+  color: #a47e3b;
+  font-size: 1.8em;
+  transition: 0.3s ease;
+  text-shadow: 3px 3px 3px #000;
+}
+
+.home .media-icons a:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.home .media-icons a:hover {
+  transform: scale(1.3);
+}
+.buttons-con {
+  margin-left: 5px;
+}
+
+.button {
+  color: #61481c;
+}
+
+.home video {
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-navigation {
+  z-index: 888;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(80px);
+  margin-bottom: 12px;
+}
+.slider-navigation .nav-btn {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+  transition: 0.3 ease;
+}
+
+.slider-navigation .nav-btn:not(:last-child) {
+  margin-right: 20px;
+}
+.slider-navigation .nav-btn:hover {
+  transform: scale(1.2);
+}
+.slider-navigation .nav-btn.active {
+  background: #e6b325;
+}
+
+.video-slide {
+  position: absolute;
+  width: 100%;
+  clip-path: circle(0% at 50%);
+}
+
+.video-slide.active {
+  clip-path: circle(150% at 0 50%);
+  transition: 2s ease;
+  transition-property: clip-path;
+}
+
+@media (max-width: 1040px) {
+  header {
+    padding: 12px 20px;
+  }
+}
+section {
+  padding: 100px 20px;
+}
+
+.home .media-icons {
+  right: 15px;
+}
+
+header .navigation {
+  position: relative;
+  display: none;
+}
+
+/* On smaller screens, decrease text size */
+
+@media (max-width: 991px) {
+  html {
+    font-size: 70%;
+  }
+  header {
+    padding: 0.5rem 0.5rem;
+  }
+
+  section {
+    padding: 0.5rem;
+  }
+
+  .home .content p {
+    margin-bottom: 40px;
+    font-size: 14px;
+  }
+
+  .text {
+    font-size: 4rem;
+  }
+
+  .menu h1 {
+    font-size: 3rem;
+  }
+
+  .menu h1 span {
+    font-size: 3rem;
+  }
+
+  .menu h1 span::after {
+    bottom: 10px;
+  }
+}

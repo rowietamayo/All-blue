@@ -1,0 +1,393 @@
+@font-face {
+  font-family: "FeelingPassionate";
+  src: url(/icon/webfonts/FeelingPassionate.otf) format("openType");
+}
+
+@font-face {
+  font-family: "rumble";
+  src: url(/icon/webfonts/Rumble.otf) format("openType");
+}
+
+nav h1 {
+  font-family: "FeelingPassionate";
+  font-size: 2.5rem;
+  width: 100%;
+  height: auto;
+  max-width: 375px;
+  font-weight: bolder;
+}
+body {
+  justify-content: center;
+  align-self: center;
+  min-height: 100vh;
+  background: #222;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 80%;
+  scroll-padding-top: 5.5rem;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 3rem;
+}
+header nav a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+header nav span {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* burger */
+
+/* Search bar */
+input[type="text"] {
+  width: 0;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+  border-radius: 30px;
+}
+
+.searchBox {
+  position: relative;
+  height: 40px;
+  padding: 8px;
+  margin-bottom: 6px;
+  margin-top: 7px;
+}
+
+.searchBox:hover > .searchInput {
+  width: 200px;
+  padding: 0 6px;
+}
+
+.searchBox:hover > .button {
+  background: white;
+  color: #2f3640;
+}
+
+.button {
+  color: white;
+  float: right;
+  background: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.searchInput {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 13px;
+  transition: 0.4s;
+  line-height: 0px;
+  width: 0px;
+}
+
+/* banner */
+
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+  display: flex;
+  max-width: 100%;
+  height: 400%;
+  border-image: 3px;
+  color: goldenrod;
+  overflow: auto;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 980px;
+  height: 500px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  font-family: "feeling passionate";
+  color: #fff;
+  font-weight: bolder;
+  text-shadow: 3px 3px #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 7rem;
+  text-align: center;
+  letter-spacing: 10px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  display: inline-block;
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+}
+
+.dot .active {
+  display: block;
+}
+
+.active,
+.dot:hover {
+  background-color: goldenrod;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* filter */
+
+.filterDiv {
+  display: none; /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: flex;
+}
+
+/* menu */
+.menu {
+  width: 100%;
+  padding: 0 10px 30px 10px;
+}
+
+.menu h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  text-shadow: 3px 3px #000;
+  color: blue;
+}
+
+.menu h1 span {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: orange;
+  font-weight: 600;
+  margin-left: 15px;
+  border-bottom: 3px solid blue;
+  line-height: 0.9;
+}
+
+.menu .menu_box {
+  display: flex;
+  border-radius: 15px;
+  column-gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu .menu_box .menu_card:hover {
+  background: rgb(73, 45, 0);
+  transition: 0.5s;
+}
+
+.menu .menu_box .menu_card {
+  width: 325px;
+  height: 450px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.menu .menu_box .menu_card .menu_image {
+  width: 300px;
+  height: 245px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+
+.menu .menu_box .menu_card .menu_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.3s;
+}
+
+.menu .menu_box .menu_card .menu_image:hover img {
+  transform: scale(1.1);
+}
+.menu .menu_box .menu_card .small_card {
+  width: 45px;
+  height: 45px;
+  float: right;
+  position: relative;
+  top: -240px;
+  right: -8px;
+  opacity: 1;
+  border-radius: 7px;
+  transition: 0.3s;
+}
+
+.menu .menu_box .menu_card:hover .small_card {
+  position: relative;
+  top: -240px;
+  right: 20px;
+  opacity: 1;
+}
+
+.menu .menu_box .menu_card .small_card i {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  line-height: 50px;
+  color: #000;
+  cursor: pointer;
+  text-shadow: 0 0 6px #000;
+  transition: 0.2s;
+}
+.menu .menu_box .menu_card .small_card i:hover {
+  color: rgb(255, 2, 57);
+}
+
+.menu .menu_box .menu_card .menu_info h2 {
+  width: 80%;
+  height: 60px;
+  text-align: center;
+  margin: 10px auto 10px auto;
+  font-size: 20px;
+  color: orange;
+  align-self: stretch;
+}
+.menu .menu_box .menu_card .menu_info h3 {
+  text-align: center;
+  margin-top: 8px;
+  line-height: 21px;
+  color: deeppink;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.menu .menu_box .menu_card .menu_info .menu_icon {
+  color: gold;
+  text-align: center;
+  margin-top: 10px 0 20px 0;
+}
+
+.menu .menu_box .menu_card .menu_info .menu_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  background: #ff0015;
+  padding: 8px 10px;
+  margin: 0 80px;
+  transition: 0.3s;
+  border-radius: 5px;
+  width: 170px;
+}
+
+/* On smaller screens, decrease text size */
+
+@media (max-width: 991px) {
+  .prev,
+  .next,
+  html {
+    font-size: 70%;
+  }
+  header {
+    padding: 0.5rem 0.5rem;
+  }
+
+  section {
+    padding: 0.5rem;
+  }
+  .text {
+    font-size: 4rem;
+  }
+  .dot {
+    height: 10px;
+    width: 10px;
+  }
+
+  .menu h1 {
+    font-size: 3rem;
+  }
+
+  .menu h1 span {
+    font-size: 3rem;
+  }
+
+  .menu h1 span::after {
+    bottom: 10px;
+  }
+}

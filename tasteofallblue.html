@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanji&apos;s great food in town&excl;</title>
+    <!--stylesheet-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="/tasteofallblue.css" />
+    <link rel="stylesheet" href="/icon/css/all.min.css" />
+  </head>
+  <body>
+    <!--navbar start-->
+
+    <header>
+      <nav class="navbar is-white">
+        <div class="navbar-brand">
+          <h1 class="ml-4 mr-3 my-1">Sanji's</h1>
+          <a
+            role="button"
+            class="navbar-burger"
+            id="burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasic"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="nav-links" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="index.html"> Home of All blue</a>
+            <div class="dropdown is-hoverable">
+              <a
+                class="navbar-link"
+                aria-haspopup="true"
+                aria-controls="dropdown-menu"
+                href="tasteofallblue.html"
+                >Menu</a
+              >
+              <div class="dropdown-trigger">
+                <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                  <div class="dropdown-content">
+                    <a
+                      class="dropdown-item"
+                      onclick="currentSlide(2), filterSelection('appe')"
+                      >Appetizers</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      onclick="currentSlide(3), filterSelection('salad')"
+                      >Salads</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      onclick="currentSlide(4), filterSelection('dessert')"
+                      >Desserts</a
+                    >
+                    <hr class="dropdown-divider" />
+                    <a
+                      class="dropdown-item"
+                      onclick="currentSlide(5), filterSelection('special')"
+                      >Specials</a
+                    >
+                    <a
+                      class="dropdown-item"
+                      onclick="currentSlide(6), filterSelection('fave')"
+                      >Nakama&apos;s favorites</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-dark">
+                  <div class="searchBox">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input
+                      class="searchInput"
+                      type="text"
+                      name=""
+                      placeholder="Search.."
+                    />
+                  </div>
+                </a>
+
+                <a class="button is-light">
+                  <i class="fa-solid fa-heart"></i
+                ></a>
+                <a class="button is-light">
+                  <i class="fa-solid fa-cart-shopping"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--navbar end-->
+    <!--Taste of all blue start-->
+    <!--The Blue Menu start-->
+    <section class="home" id="home">
+      <div class="slideshow-container">
+        <div class="mySlides fade" onclick="filterSelection('all')">
+          <img
+            src="/Sanjicooking/Orange Black Simple Food Delivery Service Banner Landscape.png"
+          />
+        </div>
+
+        <div class="mySlides fade" onclick="filterSelection('appe')">
+          <img src="/Sanjicooking/appe.jpg" />
+          <div class="text">Appetizers</div>
+        </div>
+
+        <div class="mySlides fade" onclick="filterSelection('salad')">
+          <img src="/Sanjicooking/salad.jpg" />
+          <div class="text">Salads</div>
+        </div>
+
+        <div class="mySlides fade" onclick="filterSelection('dessert')">
+          <img src="/Sanjicooking/dessert.jpg" />
+          <div class="text">Desserts</div>
+        </div>
+
+        <div class="mySlides fade" onclick="filterSelection('special')">
+          <img src="/Sanjicooking/special.jpg" />
+          <div class="text">Specials</div>
+        </div>
+
+        <div class="mySlides fade" onclick="filterSelection('fave')">
+          <img src="/SH eating/4.jpg" />
+          <div class="text">Nakama's favorites</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+      <br />
+
+      <div style="text-align: center">
+        <div class="slider-navigation">
+          <span class="dot" onclick="currentSlide(0), filterSelection('all')">
+          </span>
+          <span class="dot" onclick="currentSlide(1), filterSelection('appe')">
+          </span>
+          <span class="dot" onclick="currentSlide(2), filterSelection('salad')">
+          </span>
+          <span
+            class="dot"
+            onclick="currentSlide(3), filterSelection('dessert')"
+          >
+          </span>
+          <span
+            class="dot"
+            onclick="currentSlide(4), filterSelection('special')"
+          >
+          </span>
+          <span class="dot" onclick="currentSlide(5), filterSelection('fave')">
+          </span>
+        </div>
+      </div>
+
+      <!--food menu start-->
+      <div class="menu" id="Menu">
+        <h1>The Blue<span>Menu</span></h1>
+
+        <div class="menu_box">
+          <div class="filterDiv special">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/011.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>East&dash;blue Beef Stroganoff</h2>
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h3>฿20,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv special">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/03.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Gin&apos;s Takeout Stirfry (Baratie Special)</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h3>฿25,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv appe">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/04.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Unbelievably Awful (Great) Soup</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h3>฿10,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv appe">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/06.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Sashimi Platter (Good for Pirate Group)</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <h3>฿50,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv special">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/07.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Fishman island&apos;s Famous Bbq Sea&dash;king Ribs</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h3>฿70,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv fave">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/08.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Usopp&apos;s Choice</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h3>฿30,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv special">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/012.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Colossal King Crab with Garlic Butter</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <h3>฿80,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv appe">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/sandwich.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Treasure Splitting Sandwiches</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <h3>฿29,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv fave">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/017.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Water 7's Mizu-Mizu Barbecue</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h3>฿85,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv special">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/016.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Saucy Mini&dash;Lobsters</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <h3>฿64,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv appe">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/appe.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Four Cheese Platter</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <h3>฿95,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv dessert">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/dessert.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Mock Town Cherry Pie</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <h3>฿35,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv appe">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/inari.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Davy Back Fight Inari Sushi</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h3>฿23,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv special">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/special.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Pan Seared Steak with fries</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h3>฿70,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv appe">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/sashimi.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Blue-Finned Elephant Tuna Sashimi</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <h3>฿46,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv salad">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/salad.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Garden Salad</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-stare"></i>
+                </div>
+                <h3>฿39,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv dessert">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/banana.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Banana cake slice with Chocolate Drizzle</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <h3>฿108,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv salad">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/quinoa.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Healthy Broccoli and Quinoa Salad</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h3>฿26,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv dessert">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/Big.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Chiffon's Chocolate Nutella cake</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h3>฿230,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv salad">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/sweet.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Roasted Sweet Potato Salad with Caesar Dressing</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <h3>฿38,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv fave">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/burger.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Franky&acute;s Suuper Burger</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <h3>฿300,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv dessert">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/02.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Fruity Pancake</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <h3>฿49,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv special">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/sea.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Aglio e Olio Pizza</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <h3>฿56,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv dessert">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/Cotton Candy.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Cotton&dash;Candy Berry Pancake</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <h3>฿67,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv special">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/Kurume Ramen.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Kurume Ramen</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <h3>฿58,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv dessert">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/tangerine.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Nami&apos;s Tangerine cake</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h3>฿630,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv appe">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img
+                  src="/Sanjicooking/Spicy Shrimp Ramen.jpg"
+                  alt="foodmenu"
+                />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Spicy Shrimp Ramen</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <h3>฿34,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv appe">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/Udon.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Classic Udon</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <h3>฿20,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv fave">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img
+                  src="/Sanjicooking/Crispy Noodle Burger.jpg"
+                  alt="foodmenu"
+                />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Crispy Noodle Burger</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <h3>฿74,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv dessert">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img
+                  src="/Sanjicooking/Stawberry Cotton Candy.jpg"
+                  alt="foodmenu"
+                />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Chopper&apos;s Strawberry Candy</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h3>฿566,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv fave">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/luf.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Luffy&acute;s Meat on the Bone</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <h3>฿1,000,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv fave">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/piratelunch.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Pirate Lunch to&dash;go&excl;</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h3>฿200,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv fave">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/sand.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Robin&acute;s Favorite</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <h3>฿350,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv fave">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/spicy sea.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Spicy Seafood Pasta</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <h3>฿18,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv dessert">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/yogurt.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Berry Yogurt</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <h3>฿8,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv dessert">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/tang.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Gluten Free Tangerine Cake</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <h3>฿7,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterDiv salad">
+            <div class="menu_card">
+              <div class="menu_image">
+                <img src="/Sanjicooking/avo.jpg" alt="foodmenu" />
+              </div>
+
+              <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+
+              <div class="menu_info">
+                <h2>Avocado Salad</h2>
+
+                <div class="menu_icon">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <h3>฿36,000</h3>
+                <a href="#" class="menu_btn">Order Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--food menu end-->
+      </div>
+    </section>
+    <!--The Blue Menu end-->
+
+    <!--Taste of all blue end-->
+  </body>
+  <!--javascript-->
+  <script src="tasteofallblue.js"></script>
+</html>

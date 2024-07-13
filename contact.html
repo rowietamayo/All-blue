@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanji&apos;s great food in town&excl;</title>
+    <!--stylesheet-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="/contact.css" />
+    <link rel="stylesheet" href="/icon/css/all.min.css" />
+  </head>
+  <body>
+    <!--navbar start-->
+    <header>
+      <nav class="navbar is-white">
+        <div class="navbar-brand">
+          <h1 class="ml-4 mr-3 my-1">Sanji's</h1>
+          <a
+            role="button"
+            class="navbar-burger"
+            id="burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasic"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="nav-links" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="index.html"> Home of All blue</a>
+            <a class="navbar-item" href="tasteofallblue.html"> Menu</a>
+          </div>
+
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="navbar-end">
+                <div class="navbar-item">
+                  <div class="buttons-con"></div>
+                  <a class="button is-info" href="/contact.html">Contact us</a>
+                  <div class="buttons-con"></div>
+                  <a class="button is-link" href="send.html">Send a cake</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--navbar end-->
+    <!--contact start-->
+    <div class="container">
+      <form name="form1" id="form1" action="/action_page.php">
+        <h3>Reach out to us&excl;</h3>
+        <div class="row">
+          <div class="col-25">
+            <label for="fname">First Name</label>
+          </div>
+          <div class="col-75">
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              required
+              placeholder="Your name.."
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">Last Name</label>
+          </div>
+
+          <div class="col-75">
+            <input
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder="Your last name.."
+              required
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="gender">Gender</label>
+          </div>
+          <div class="col-75">
+            <select id="gender" name="gender">
+              <option value="d">&dash;</option>
+              <option value="f">Female</option>
+              <option value="m">Male</option>
+              <option value="n">Prefer not to say</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="continent">Continent</label>
+          </div>
+          <div class="col-75">
+            <select name="continent" id="continent">
+              <option value="" selected="selected">
+                Select your Continent..
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="island">Island</label>
+          </div>
+          <div class="col-75">
+            <select name="island" id="island">
+              <option value="" selected="selected">&dash;</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="village">Village</label>
+          </div>
+          <div class="col-75">
+            <select name="village" id="village">
+              <option value="" selected="selected">&dash;</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="subject">Message</label>
+          </div>
+          <div class="col-75">
+            <textarea
+              id="subject"
+              name="subject"
+              placeholder="Write something.."
+              required
+            ></textarea>
+          </div>
+        </div>
+        <br />
+
+        <button class="btnSubmit" type="submit" value="Submit" a href="">
+          Submit
+        </button>
+        <br />
+        <br />
+      </form>
+
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d50521611.199833065!2d-117.53166973263339!3d-39.38805576427021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1677068741999!5m2!1sen!2sph"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+
+    <!--contact end-->
+  </body>
+  <script src="contact.js"></script>
+</html>
